@@ -1,0 +1,46 @@
+# Legacy explicit --config example. The server handoff package normally reads
+# runtime controls from para.in; use this file only when passing
+# run_dazi_configured.py --config /path/to/dazi_run.conf.
+# Command-line flags and para.in runtime controls override these values.
+
+# One user-facing default. Used by omp_threads and ti_workers unless they are set below.
+threads = 4
+
+# OpenMP controls default Fortran depthkernel loops, FMM/ray/G OpenMP regions, and
+# Vorotomo realization-level OpenMP regions.
+omp_threads = 4
+
+# TI process-batch workers are external worker processes, so keep this separate
+# when you need to avoid CPU oversubscription.
+ti_workers = 4
+
+# Backend profile. The default wrapper profile is fast_tight_root. For strict
+# baseline-equivalent ani_voro production checks, use strict_ani_voro.
+profile = fast_tight_root
+
+# Explicit backend values override the profile. Leave these as the preferred
+# fast defaults unless a case-specific protocol says otherwise.
+depthkernel_backend = pdsurf_numba_tight_root_fortran_pv
+depthkernel_ti_backend = process_batch
+voro_gp_backend = direct
+pdsurf_engine = auto
+
+# Memory/scheduling knobs for the Python batch depthkernel backends.
+pdsurf_tile_columns = 64
+ti_tile_columns = 64
+
+# Defaults point to this migration repo; override only when deliberately
+# comparing an external binary or worker build.
+python = /opt/miniconda3/envs/dispa/bin/python
+binary = /Users/liuxin/Desktop/DSurf_test/DAzi_vorotomo_migration/bin/DAzimSurfTomo
+pdsurf_senk_script = /Users/liuxin/Desktop/DSurf_test/DAzi_vorotomo_migration/depthkernel_lab/pdsurf_tile_senk_solver.py
+ti_batch_script = /Users/liuxin/Desktop/DSurf_test/DAzi_vorotomo_migration/depthkernel_lab/depthkernel_ti_process_batch.py
+ti_worker = /Users/liuxin/Desktop/DSurf_test/DAzi_vorotomo_migration/depthkernel_lab/depthkernel_ti_worker
+infile = para.in
+
+# Optional diagnostics.
+voro_timer = 0
+
+# Optional OpenMP placement. Leave unset unless testing.
+omp_proc_bind = unset
+omp_places = unset

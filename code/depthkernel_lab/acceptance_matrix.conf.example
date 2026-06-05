@@ -1,0 +1,15 @@
+# Four-combo acceptance matrix input.
+# Use absolute paths to the prepared case directories.
+
+iso_novoro = /path/to/iso_novoro_case
+ani_novoro = /path/to/ani_novoro_case
+iso_voro = /path/to/iso_voro_case
+ani_voro = /path/to/ani_voro_case
+
+# Shared runtime settings.
+threads = 4
+omp_threads = 4
+ti_workers = 4
+tile_columns = 64
+ti_tile_columns = 64
+infile = para.in
