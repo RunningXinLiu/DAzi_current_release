@@ -4,6 +4,30 @@ Stable DAzi surface-wave azimuthal anisotropy tomography package with Voronoi pa
 
 This repository is intended as a clean public-facing release snapshot: it keeps the core Fortran inversion/forward code, compact examples, and practical run notes in one place.
 
+## Example Outputs
+
+The included Yunnan example demonstrates both fixed-grid and Voronoi parameterizations. Red/blue colors show low/high velocity structure, and black sticks show azimuthal anisotropy direction and relative amplitude.
+
+### NoVoro Reference
+
+![Yunnan NoVoro Vs with anisotropy sticks](docs/assets/yunnan_novoro_vs_ani_sticks.png)
+
+### Voronoi Reference
+
+![Yunnan Voronoi Vs with anisotropy sticks](docs/assets/yunnan_voro_vs_ani_sticks.png)
+
+### Coverage And Support Diagnostics
+
+Voronoi models should be interpreted together with ray/path support. Poorly covered regions can contain model-space extrapolation and should not be over-interpreted.
+
+![Yunnan effective support map](docs/assets/yunnan_effective_support_map.png)
+
+### Synthetic Recovery Check
+
+The package also includes tools for converting inversion outputs into synthetic truth models. Checkerboard-style tests are useful for diagnosing recovery, smoothing, and anisotropic amplitude behavior.
+
+![Checkerboard anisotropy recovery comparison](docs/assets/checkerboard_ani_recovery_comparison.png)
+
 ## What This Code Does
 
 DAzi estimates 3-D isotropic shear-wave velocity perturbations and azimuthal anisotropy from Rayleigh-wave phase/travel-time observations.
@@ -173,4 +197,3 @@ This tag corresponds to the release package with expanded current-release `para.
 ## Notes
 
 This repository is a research code release. It is organized for reproducible collaboration and example-driven use, not as a polished software library.
-
