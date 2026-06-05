@@ -6,15 +6,11 @@ This repository is intended as a clean public-facing release snapshot: it keeps 
 
 ## Example Outputs
 
-The included Yunnan example demonstrates both fixed-grid and Voronoi parameterizations. Red/blue colors show low/high velocity structure, and black sticks show azimuthal anisotropy direction and relative amplitude.
+### Real-Data Vs And Azimuthal Anisotropy
 
-### NoVoro Reference
+A representative real-data result showing multi-depth Vs structure with azimuthal anisotropy sticks. The stick reference length is 4% anisotropy amplitude.
 
-![Yunnan NoVoro Vs with anisotropy sticks](https://github.com/RunningXinLiu/DAzi_current_release/releases/download/v2026.06.05-current-para/yunnan_novoro_vs_ani_sticks.png)
-
-### Voronoi Reference
-
-![Yunnan Voronoi Vs with anisotropy sticks](https://github.com/RunningXinLiu/DAzi_current_release/releases/download/v2026.06.05-current-para/yunnan_voro_vs_ani_sticks.png)
+![Real-data Vs and azimuthal anisotropy with 4% reference sticks](https://github.com/RunningXinLiu/DAzi_current_release/releases/download/v2026.06.05-current-para/srl_realdata_vs_ani_ref4.png)
 
 ### Coverage And Support Diagnostics
 
