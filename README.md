@@ -10,23 +10,23 @@ The included Yunnan example demonstrates both fixed-grid and Voronoi parameteriz
 
 ### NoVoro Reference
 
-![Yunnan NoVoro Vs with anisotropy sticks](docs/assets/yunnan_novoro_vs_ani_sticks.png)
+![Yunnan NoVoro Vs with anisotropy sticks](https://github.com/RunningXinLiu/DAzi_current_release/releases/download/v2026.06.05-current-para/yunnan_novoro_vs_ani_sticks.png)
 
 ### Voronoi Reference
 
-![Yunnan Voronoi Vs with anisotropy sticks](docs/assets/yunnan_voro_vs_ani_sticks.png)
+![Yunnan Voronoi Vs with anisotropy sticks](https://github.com/RunningXinLiu/DAzi_current_release/releases/download/v2026.06.05-current-para/yunnan_voro_vs_ani_sticks.png)
 
 ### Coverage And Support Diagnostics
 
 Voronoi models should be interpreted together with ray/path support. Poorly covered regions can contain model-space extrapolation and should not be over-interpreted.
 
-![Yunnan effective support map](docs/assets/yunnan_effective_support_map.png)
+![Yunnan effective support map](https://github.com/RunningXinLiu/DAzi_current_release/releases/download/v2026.06.05-current-para/yunnan_effective_support_map.png)
 
 ### Synthetic Recovery Check
 
 The package also includes tools for converting inversion outputs into synthetic truth models. Checkerboard-style tests are useful for diagnosing recovery, smoothing, and anisotropic amplitude behavior.
 
-![Checkerboard anisotropy recovery comparison](docs/assets/checkerboard_ani_recovery_comparison.png)
+![Checkerboard anisotropy recovery comparison](https://github.com/RunningXinLiu/DAzi_current_release/releases/download/v2026.06.05-current-para/checkerboard_ani_recovery_comparison.png)
 
 ## What This Code Does
 
