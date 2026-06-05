@@ -9,7 +9,7 @@ China_YN_Rayleigh_RS_5-40s.dat     		   c: data file
 3.0  5.0                            	   c: minimum and maximum Vsv
 200                                        c: max(sources, receivers)
 0.2                                        c: sparsity fraction
-10								  		   c: maximum of iteration
+10                                   c: maximum of iteration
 F                                    	   c: iso-mode (T: isotropic inversion; F: joint inversion)
 cccccccccc control parameters
 20		           		                   c: smoothing for dVsv
@@ -18,4 +18,16 @@ cccccccccc control parameters
 cccccccccc periods
 36                                         c: kmaxRc (followed by periods)
 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40
-0 500 50 1                                c: vorotomo,ncells,nrealizations,hvratio
+cccccccccc output controls
+1                                    c: output intermediate results
+0                                    c: output raypaths of each period
+cccccccccc vorotomo parameters
+0                                    c: voronoi mode (1: use; 0: not use)
+cccccccccc optional runtime controls (read by wrapper, ignored by Fortran)
+fast_tight_root                      c: profile [legacy_baseline|strict_ani_voro|fast_exploratory|fast_tight_root]
+fmm_parallel                         c: ray_backend [serial|fmm_parallel]
+scipy                                c: lsmr_backend [fortran|scipy|unset]
+4                                    c: threads, unified OpenMP/process CPU budget; DAZI_THREADS overrides
+64                                   c: pdsurf_tile_columns, ISO pDSurf depth-kernel batch columns
+64                                   c: ti_tile_columns, ANI/TI depth-kernel worker-task columns
+0                                    c: voro_timer, 1 print Vorotomo timing; 0 disable

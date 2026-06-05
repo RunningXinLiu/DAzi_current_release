@@ -24,7 +24,7 @@ The Fortran program still supports the original direct `para.in` workflow:
 
 ```bash
 cd examples/test4_Yunnan/voro
-../../code/bin/DAzimSurfTomo para.in
+../../../code/bin/DAzimSurfTomo para.in
 ```
 
 From the package root, the helper script does the same thing and only adds thread setup plus logging:
@@ -38,13 +38,17 @@ The second argument is the thread count. If it is omitted, the script uses `DAZI
 ## 3. Included Examples
 
 ```text
-examples/test4_Yunnan/smooth   fixed-grid / no-Voro reference
-examples/test4_Yunnan/voro     Voro example
-examples/test4_Yunnan/voro50   lower-cell Voro example
-examples/test4_Yunnan/voro200  higher-cell Voro example
+examples/test4_Yunnan/smooth   current-release NoVoro reference with expanded para.in
+examples/test4_Yunnan/voro     current-release Voro reference with expanded para.in
 ```
 
-Each example contains the needed `para.in`, `MOD`, and dispersion data file.
+The old compact-parameter examples are kept separately under:
+
+```text
+examples/test4_Yunnan_legacy_old_para
+```
+
+Use the current-release examples above for new runs.
 
 ## 4. Important Voro Note
 
@@ -64,4 +68,3 @@ For a new dataset:
 2. Use only periods with enough path coverage.
 3. Use fewer iterations first, for example 3-5.
 4. Increase Voro cell count only after the residual and model are stable.
-

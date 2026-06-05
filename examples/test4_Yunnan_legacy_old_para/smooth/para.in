@@ -1,0 +1,21 @@
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+c INPUT PARAMETERS
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+China_YN_Rayleigh_RS_5-40s.dat     		   c: data file
+38 42 18                         		   c: nx ny nz (grid number in lat lon and depth directions)
+29.0  98.0                                 c: goxd gozd (upper left point,[lat,lon])
+0.25 0.25                                  c: dvxd dvzd (grid interval in lat and lon directions)
+4                                          c: number of sublayers (2~5)
+3.0  5.0                            	   c: minimum and maximum Vsv
+200                                        c: max(sources, receivers)
+0.2                                        c: sparsity fraction
+10								  		   c: maximum of iteration
+F                                    	   c: iso-mode (T: isotropic inversion; F: joint inversion)
+cccccccccc control parameters
+20		           		                   c: smoothing for dVsv
+30                                         c: smoothing of Gc, Gs
+0		           		                   c: damping used by LSQR (default: 0)
+cccccccccc periods
+36                                         c: kmaxRc (followed by periods)
+5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40
+0 500 50 1                                c: vorotomo,ncells,nrealizations,hvratio
